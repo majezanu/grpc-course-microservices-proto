@@ -4,12 +4,13 @@ option go_package = "github.com/majezanu/grpc-course-microservices-proto/order";
 
 message CreteOrderRequest {
     int64 customer_id = 1;
-    repeated Item items = 2;
-    float total_price = 3;
+    repeated OrderItem order_items = 2;
 }
 
-message Item {
-    string name = 1;
+message OrderItem {
+
+    string product_code = 1;
+    float unit_price = 2;
     int32 quantity = 3;
 }
 
@@ -18,6 +19,5 @@ message CreateOrderResponse {
 }
 
 service Order {
-    rpc Create(CreteOrderRequest)
-    returns (CreateOrderResponse) {}
+    rpc Create(CreteOrderRequest) returns (CreateOrderResponse) {}
 }
