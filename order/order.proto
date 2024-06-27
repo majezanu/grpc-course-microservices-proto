@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/majezanu/microservices-proto/order";
+option go_package = "github.com/majezanu/grpc-course-microservices-proto/order";
 
 message CreteOrderRequest {
     int64 user_id = 1;
