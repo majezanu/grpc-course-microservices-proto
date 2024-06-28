@@ -13,6 +13,6 @@ message CreatePaymentResponse {
     string status = 2;
 }
 
-service Order {
+service Payment {
     rpc Create(CreatePaymentRequest) returns (CreatePaymentResponse) {}
 }
